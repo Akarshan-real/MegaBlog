@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+  /* Light */
+  --light-bg: #F5F7FF;
+  --light-surface: #EEF2FF;
+  --light-card: #FFFFFF;
+
+  --light-primary: #4F46E5;
+  --light-primary-hover: #4338CA;
+
+  --light-danger: #ef4444;
+  --light-danger-hover: #dc2626;
+
+  --light-accent: #7C3AED;
+  --light-accent-hover: #6D28D9;
+
+  --light-text: #1E1B4B;
+  --light-text-muted: #6366F1;
+
+  --light-border: #E0E7FF;
+
+  /* Dark */
+
+  --dark-bg: #0B1120;
+  --dark-surface: #131A2B;
+  --dark-card: #1C2438;
+
+  --dark-danger: #f87171;
+  --dark-danger-hover: #ef4444;
+
+  --dark-primary: #38BDF8;
+  --dark-primary-hover: #0EA5E9;
+
+  --dark-accent: #A78BFA;
+  --dark-accent-hover: #8B5CF6;
+
+  --dark-text: #E2E8F0;
+  --dark-text-muted: #94A3B8;
+
+  --dark-border: #2A334A;
+}
+
+:root {
+  --bg: var(--light-bg);
+  --surface: var(--light-surface);
+  --card: var(--light-card);
+
+  --primary: var(--light-primary);
+  --primary-hover: var(--light-primary-hover);
+
+  --accent: var(--light-accent);
+  --accent-hover: var(--light-accent-hover);
+
+  --danger: var(--light-danger);
+  --danger-hover: var(--light-danger-hover);
+
+  --text: var(--light-text);
+  --text-muted: var(--light-text-muted);
+
+  --border: var(--light-border);
+}
+
+.dark {
+  --bg: var(--dark-bg);
+  --surface: var(--dark-surface);
+  --card: var(--dark-card);
+
+  --primary: var(--dark-primary);
+  --primary-hover: var(--dark-primary-hover);
+
+  --accent: var(--dark-accent);
+  --accent-hover: var(--dark-accent-hover);
+
+  --danger: var(--dark-danger);
+  --danger-hover: var(--dark-danger-hover);
+
+  --text: var(--dark-text);
+  --text-muted: var(--dark-text-muted);
+
+  --border: var(--dark-border);
+}
+
+.mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* Scroll bar */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--surface);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 999px;
+  border: 2px solid var(--surface);
+  transition: all 0.2s ease-in-out;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Input Field */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--surface) inset !important;
+  -webkit-text-fill-color: var(--text) !important;
+  caret-color: var(--text);
+}
